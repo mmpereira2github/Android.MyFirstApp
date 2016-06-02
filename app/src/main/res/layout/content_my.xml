@@ -2,25 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_my">
+    tools:showIn="@layout/activity_my"
+    android:focusableInTouchMode="true"
+    android:id="@+id/diaAgenda">
 
-    <EditText
-        android:id="@+id/edit_message"
-        android:layout_width="0dp"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/edit_message"
-        android:layout_weight="1" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/estabelecimento"
+        android:id="@+id/estabelecimento"
+        android:textAlignment="center"
+        android:background="?attr/colorPrimary"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="YYYY/MM/DD"
+        android:id="@+id/agendaDia"
+        android:textAlignment="center"
+        android:background="?attr/colorPrimary"
+        android:textColor="@android:color/white" />
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
         android:onClick="sendMessage"/>
-    <!--TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" /-->
+
 </LinearLayout>

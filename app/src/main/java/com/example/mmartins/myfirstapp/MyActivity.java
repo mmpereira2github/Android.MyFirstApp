@@ -10,6 +10,14 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.example.mmartins.model.Estabelecimento;
+import com.example.mmartins.myfirstapp.agenda.DisplayDiaAgenda;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class MyActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.example.mmartins.myfirstapp.MESSAGE";
@@ -29,6 +37,11 @@ public class MyActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Estabelecimento estabelecimento = new Estabelecimento();
+        Date dia = Calendar.getInstance().getTime();
+        LinearLayout relativeLayout = (LinearLayout) findViewById(R.id.diaAgenda);
+        DisplayDiaAgenda.createDiaAgenda(relativeLayout, estabelecimento, dia);
     }
 
     @Override
@@ -56,9 +69,9 @@ public class MyActivity extends AppCompatActivity {
     /** Called when the user clicks the Send button */
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+//        EditText editText = (EditText) findViewById(R.id.edit_message);
+//        String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, message);
+//        startActivity(intent);
     }
 }
