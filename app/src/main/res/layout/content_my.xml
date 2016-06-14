@@ -1,38 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/fragment"
+    android:name="br.com.syncinfo.calendar.view.android.DayEventsBrowsingViewFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_my"
-    android:focusableInTouchMode="true"
-    android:id="@+id/diaAgenda">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/estabelecimento"
-        android:id="@+id/estabelecimento"
-        android:textAlignment="center"
-        android:background="?attr/colorPrimary"
-        android:textColor="@android:color/white" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="YYYY/MM/DD"
-        android:id="@+id/agendaDia"
-        android:textAlignment="center"
-        android:background="?attr/colorPrimary"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/button_send"
-        android:onClick="sendMessage"/>
-
-</LinearLayout>
+    tools:layout="@layout/fragment_day_events">
+</fragment>
